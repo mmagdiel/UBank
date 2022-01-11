@@ -1,0 +1,21 @@
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../assets/silhouette.png");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-content {
+  position: absolute;
+  top: 10%;
+  transform: translate(0%, 0%);
+  height: 100%;
+  width: 100%;
+}
+.hero-content * {
+  display: flex;
+  justify-content: center;
+  color: white;
+}

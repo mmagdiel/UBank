@@ -8,7 +8,7 @@ Productivity depends, among many other variables, on the initial capital investm
 
 ### Intention
 
-UBanco was born as a proposal to facilitate financing. We believe in the region's individual capacity to innovate and grow in a more connected and interdependent world.
+UBank was born as a proposal to facilitate financing. We believe in the region's individual capacity to innovate and grow in a more connected and interdependent world.
 
 ## Brand Development
 
