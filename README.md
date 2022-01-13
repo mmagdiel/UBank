@@ -62,3 +62,17 @@ The screens with their interactions are summarized in the following images
 ### Wireframes
 
 These are some wireframes with the interactions on the screens
+
+### To Develop
+
+```sh
+git clone [your favorite connection method]
+cd UBank
+npm install -g json-server
+cd backend
+json-server --watch db.json
+cd ..
+cd frontend
+npm install
+ng serve
+```

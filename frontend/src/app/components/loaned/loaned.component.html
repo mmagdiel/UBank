@@ -1,1 +1,114 @@
-<p>loaned works!</p>
+<mat-card>
+  <mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="loanedForm">
+      <form [formGroup]="loanedForm">
+        <ng-template matStepLabel>Request amount</ng-template>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Requested value</mat-label>
+            <input
+              matInput
+              placeholder="10000"
+              formControlName="value"
+              required
+              type="number"
+            />
+            <mat-error *ngIf="isLowerValue()">
+              Enter a value greater than 10000
+            </mat-error>
+            <mat-error *ngIf="isGreaterValue()">
+              Enter a value lower than 100000
+            </mat-error>
+            <mat-error *ngIf="isValidValue()"> Required field </mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Choose a pay date</mat-label>
+            <input matInput [min]="minDate" [matDatepicker]="payDate" />
+            <mat-datepicker-toggle
+              matSuffix
+              [for]="payDate"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #payDate></mat-datepicker>
+          </mat-form-field>
+        </div>
+
+        <div class="buttons">
+          <button
+            mat-button
+            color="primary"
+            matStepperNext
+            [disabled]="loanedForm.invalid"
+          >
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="personalForm">
+      <form [formGroup]="personalForm">
+        <ng-template matStepLabel>Personal data</ng-template>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Name</mat-label>
+            <input
+              matInput
+              placeholder="James Bond"
+              formControlName="name"
+              required
+              type="text"
+            />
+            <mat-error *ngIf="isValidName()">Required field</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              placeholder="jamesbond@mi6.org"
+              formControlName="email"
+              required
+              type="email"
+            />
+            <mat-error *ngIf="isValidEmail()">Required field</mat-error>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="fill">
+            <mat-label>Identification number</mat-label>
+            <input
+              matInput
+              placeholder="5555555"
+              formControlName="documentation"
+              required
+              type="number"
+            />
+            <mat-error *ngIf="isLowerDocumentation()">
+              Enter a value greater than 10000
+            </mat-error>
+            <mat-error *ngIf="isGreaterDocumentation()">
+              Enter a value lower than 100000
+            </mat-error>
+            <mat-error *ngIf="isValidDocumentation()">Required field</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="buttons">
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext [disabled]="personalForm.invalid">
+            Next
+          </button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Query result</ng-template>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-button (click)="canLoaned(1000)">Query</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+</mat-card>

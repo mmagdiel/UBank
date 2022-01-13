@@ -1,0 +1,5 @@
+@use "@angular/material" as mat;
+
+.header {
+  @include mat.elevation(8);
+}

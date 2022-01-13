@@ -13,9 +13,11 @@
   transform: translate(0%, 0%);
   height: 100%;
   width: 100%;
-}
-.hero-content * {
   display: flex;
   justify-content: center;
   color: white;
+  flex-direction: row;
+}
+.hero-header {
+  margin: 2rem 3rem;
 }

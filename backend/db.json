@@ -1,73 +1,17 @@
 {
-  "posts": [
-    {
-      "amount": 0,
-      "email": "",
-      "password": "",
-      "id": 6
-    },
-    {
-      "amount": "550000",
-      "email": "wqerqw",
-      "password": "qwerwer",
-      "id": 7
-    },
-    {
-      "amount": "10000",
-      "email": "fsdfg",
-      "password": "sgsdfg",
-      "id": 8
-    },
-    {
-      "amount": "10000",
-      "email": "dfasdf",
-      "password": "asdfasdf",
-      "id": 9
-    },
-    {
-      "amount": "10000",
-      "email": "dfgsdg",
-      "password": "sdfgsdg",
-      "id": 10
-    },
-    {
-      "amount": "10000",
-      "email": "werwe",
-      "password": "aasfdf",
-      "id": 11
-    },
-    {
-      "amount": "10000",
-      "email": "wertwert",
-      "password": "wertwert",
-      "id": 12
-    },
-    {
-      "amount": "10000",
-      "email": "<zc",
-      "password": "<xc<zc",
-      "id": 13
-    },
-    {
-      "amount": "10000",
-      "email": "s<dfsdf",
-      "password": "asdfasdf",
-      "id": 14
-    }
-  ],
   "users": [
     {
       "id": 1,
       "name": "something",
       "email": "something@gmail.com",
-      "documentation": 12445234532,
-      "load": {
-        "value": 152222,
-        "pay_day": "2022/07/15"
-      }
+      "documentation": 12445234532
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "loans": [
+    {
+      "id": 1,
+      "value": 152222,
+      "pay_day": "2022/07/15"
+    }
+  ]
 }
